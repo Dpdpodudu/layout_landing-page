@@ -1,0 +1,74 @@
+.page {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  scroll-behavior: smooth;
+  color: $color-text-main;
+
+  &__body {
+    margin: 0;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition-opacity;
+
+    &:target {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $bp-tablet) {
+    height: 32px;
+    width: 32px;
+  }
+
+  &--phone {
+    background-image: url('../icons/phone-icon.png');
+  }
+
+  &--burger {
+    background-image: url('../icons/burger-menu.png');
+  }
+
+  &--close {
+    background-image: url('../icons/close-icon.png');
+  }
+}
+
+.logotip {
+  display: block;
+
+  img {
+    display: block;
+    width: 125px;
+    height: 16px;
+
+    @media (min-width: $bp-tablet) {
+      width: 172px;
+      height: 24px;
+    }
+  }
+}
