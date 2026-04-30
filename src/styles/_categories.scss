@@ -82,6 +82,13 @@
 .double--image {
   @include square-image;
 
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
   &--wide {
     @media (min-width: $bp-tablet) {
       aspect-ratio: 2 / 1;

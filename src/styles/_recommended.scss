@@ -92,6 +92,13 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    transition: transform 0.3s ease;
+    cursor: pointer; // Чтобы курсор менялся на пальчик
+  
+    &:hover {
+      transform: scale(1.05); // Увеличиваем на 5%
+    }
   }
 
   &__phone {
