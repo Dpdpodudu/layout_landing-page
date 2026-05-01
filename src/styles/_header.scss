@@ -111,6 +111,7 @@
 
   &__link {
     display: inline-block;
+    position: relative;
     font-size: 22px;
     font-weight: 700;
     line-height: 100%;
@@ -119,9 +120,26 @@
     color: inherit;
     text-transform: uppercase;
     transition: $transition-default;
+    padding-bottom: 6px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-text-main;
+      transition: width 0.3s ease;
+    }
+
     &:hover {
       transform: translateY(-2px);
       text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
