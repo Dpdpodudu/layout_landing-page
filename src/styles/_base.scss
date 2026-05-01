@@ -115,18 +115,3 @@
     background-image: url('../icons/close-icon.png');
   }
 }
-
-.logotip {
-  display: block;
-
-  img {
-    display: block;
-    width: 125px;
-    height: 16px;
-
-    @media (min-width: $bp-tablet) {
-      width: 172px;
-      height: 24px;
-    }
-  }
-}
