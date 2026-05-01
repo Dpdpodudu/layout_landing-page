@@ -7,17 +7,11 @@
   height: 100vh;
   background: url('../images/header-bg-mobile.png') center / cover no-repeat;
 
-  @media (min-width: $bp-mobile-small) {
-    height: 568px;
-  }
-
   @media (min-width: $bp-tablet) {
-    height: 993px;
     padding: 36px 73px 65px;
   }
 
   @media (min-width: $bp-desktop) {
-    height: 720px;
     padding: 36px 120px 92px;
   }
 
@@ -74,12 +68,18 @@
   }
 
   &__phone {
-    display: block;
+    display: inline-block;
     margin-top: 40px;
     font-size: 16px;
     letter-spacing: 2px;
     text-decoration: none;
     color: inherit;
+    transition: $transition-default;
+
+    &:hover {
+      transform: translateY(-2px);
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
   }
 
   &__order {
@@ -90,6 +90,12 @@
     text-decoration: none;
     color: inherit;
     border-bottom: 1px solid $color-text-main;
+    transition: $transition-default;
+
+    &:hover {
+      transform: translateY(-2px);
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
@@ -101,10 +107,10 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-
   }
 
   &__link {
+    display: inline-block;
     font-size: 22px;
     font-weight: 700;
     line-height: 100%;
@@ -112,5 +118,10 @@
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
+    transition: $transition-default;
+    &:hover {
+      transform: translateY(-2px);
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
   }
 }
